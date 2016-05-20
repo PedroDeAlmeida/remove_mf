@@ -6,10 +6,10 @@ port=22
 pass=fucker
 user=mother
 
-network="172.16.17."
+network="172.16.6."
 
-ipinicio=1
-ipfim=254
+ipinicio=190
+ipfim=191
 
 while [ $ipinicio -le $ipfim ]
 do
