@@ -6,11 +6,11 @@ port=22
 pass=fucker
 user=mother
 
-network="172.16.6."
+network="172.16.18."
+ip=1
 
-for (( c=1; c<=5; c++ ))
+while [ $ip -le 5 ]
 do
-  sshpass -p $pass ssh -p$port -oConnectTimeout=10 -oStrictHostKeyChecking=no $user@$network$c "trigger_url https://raw.githubusercontent.com/pedrodealmeida/remove_mf/master/removemfv2.sh | sh"&
+	sshpass -p $pass ssh -p $port -oConnectTimeout=10 -oStrictHostKeyChecking=no $user@$network$ip "trigger_url https://raw.githubusercontent.com/pedrodealmeida/remove_mf/master/removemfv2.sh | sh"&
+	(( ip++ ))
 done
-
-
