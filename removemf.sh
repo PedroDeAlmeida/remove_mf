@@ -1,3 +1,5 @@
+#!/bin/sh
+# Pedro Almeida - pedroalmeida173@gmail.com
 
 port=22
 

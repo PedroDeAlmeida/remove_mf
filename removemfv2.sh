@@ -1,4 +1,7 @@
+#!/bin/sh
+# Pedro Almeida - pedroalmeida173@gmail.com
 
+cd /etc/persistent/
 rm mf.tar
 rm -rf .mf
 rm -r mcuser
@@ -9,10 +12,6 @@ cat /etc/passwd2 >> /etc/passwd
 rm /etc/passwd2
 
 cfgmtd -w -p /etc/
-
-killall -9 search
-killall -9 mother
-killall -9 sleep
 
 versao=`cat /etc/version | cut -d'.' -f1`
 
